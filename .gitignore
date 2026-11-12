@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+credentials/client_secret.json
+data/token.json
+data/*.json
+data/thumbnails/
+data/*.log
+*.log
+credentials/*
+!credentials/.gitkeep
+# third-party binary: download it yourself (see tools/ffprobe/README.txt)
+tools/ffprobe/ffprobe.exe
