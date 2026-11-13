@@ -22,6 +22,14 @@ automation, scraping or simulated clicks.
 | **Calendar** | Month view of what publishes when. |
 | **Settings** | Connection status, today's API quota use and remaining headroom, app and developer settings, crash history. |
 
+![Daily Upload Frequency page previewing a change from 3 to 2 Shorts a day](docs/screenshots/frequency.png)
+
+| Calendar |
+|---|
+| ![Calendar page](docs/screenshots/calendar.png) |
+
+*Screenshots use invented Shorts and a fake YouTube connection, not a real channel.*
+
 **Safety rules the code follows**
 
 - Every schedule change is **previewed before anything is sent** to YouTube.
@@ -56,7 +64,16 @@ Only the Google accounts you added as test users can sign in.
 (for example from https://www.gyan.dev/ffmpeg/builds/) and copy only `ffprobe.exe` to
 `tools\ffprobe\ffprobe.exe`. See [`tools/ffprobe/README.txt`](tools/ffprobe/README.txt).
 
-## Running it
+## Download and run (Windows)
+
+1. Install [Python 3](https://www.python.org/downloads/) (the app is developed on 3.13).
+2. Download **Source code (zip)** from the [latest release](https://github.com/REralph/yt-schedule-manager/releases/latest)
+   and unzip it.
+3. Do the one-time Google setup above and save your `client_secret.json` in `credentials\`.
+4. Double-click **`setup.bat`** once (it creates a private `.venv` and installs the libraries), then
+   **`run_app.bat`** to start the app without a console window.
+
+By hand, the same steps are:
 
 ```bash
 python -m venv .venv
@@ -64,8 +81,6 @@ python -m venv .venv
 pip install -r requirements.txt
 python main.py
 ```
-
-`run_app.bat` starts it without a console window once the virtual environment exists.
 
 ## Tests
 
@@ -95,6 +110,10 @@ data/                      config, history, queue order, crash and error logs (J
 ui/                        CustomTkinter window, pages, widgets and dialogs
 tests/                     regression-test scripts
 ```
+
+## More
+
+- **[Architecture map](https://claude.ai/artifact/9a6PyeBTPQvJJGXkCFY9UT)**: what every file does and how the parts fit together.
 
 ## Licence
 

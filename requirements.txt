@@ -1,8 +1,9 @@
-customtkinter>=5.2.2
-Pillow>=10.0.0
-opencv-python-headless>=4.9.0
-google-api-python-client>=2.100.0
-google-auth-httplib2>=0.2.0
-google-auth-oauthlib>=1.2.0
-tzdata>=2024.1
-tkinterdnd2>=0.6.2
+# Exact versions the app is developed and tested with (setup.bat installs these).
+customtkinter==6.0.0
+Pillow==12.3.0
+opencv-python-headless==5.0.0.93
+google-api-python-client==2.199.0
+google-auth-httplib2==0.4.1
+google-auth-oauthlib==1.4.0
+tzdata==2026.3
+tkinterdnd2==0.6.2
